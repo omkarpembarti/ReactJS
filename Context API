@@ -16,12 +16,33 @@ export default function App() {
 function User() {
   return (
     <UserContext.Consumer>
-      {value => <h1>{value}</h1>} 
-      {/* prints: Reed */}
+      {value => <h1>{value}</h1>}
     </UserContext.Consumer>
   )
 }
 
 /******************************************************************************************************************/
+USING useContext
+----------------
+import React from 'react';
+
+export const UserContext = React.createContext();
+
+export default function App() {
+  return (
+    <UserContext.Provider value="Reed">
+      <User />
+    </UserContext.Provider>
+  )
+}
+
+function User() {
+const ctx = React.useContext(UserContext);
+return (
+    <>
+      <h1>{ctx}</h1> 
+    </>
+  )
+}
 
 
