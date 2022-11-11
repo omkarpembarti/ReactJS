@@ -13,3 +13,10 @@ a === b // true
 
 Array.sort work by converting elements to array and then compairing
 --------------------------------------------------------------------------------
+Comparing Objects
+src -->https://plainenglish.io/blog/comparing-objects-in-javascript-ce2dc1f3de7f
+
+var a = {one:1,two:2};  // a contains the reference(address) of the object
+var b = {one:1,two:2};  // b contains the reference(address) of the object
+
+a == b  // we are compairing the addresses therefore its False.
